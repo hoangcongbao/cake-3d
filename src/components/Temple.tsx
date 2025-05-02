@@ -14,7 +14,8 @@ const Temple: React.FC<TempleProps> = ({
   scale = 1
 }) => {
   const modelRef = useRef<Group>(null);
-  const { scene } = useGLTF('/Temple Asset Pack.glb');
+  // Update this URL to where you've hosted the GLB file
+  const { scene } = useGLTF('https://example.com/path/to/Temple_Asset_Pack.glb');
   
   // Use useEffect for animation
   useEffect(() => {
@@ -55,6 +56,6 @@ const Temple: React.FC<TempleProps> = ({
 };
 
 // Pre-load the model
-useGLTF.preload('/Temple Asset Pack.glb');
+useGLTF.preload('https://example.com/path/to/Temple_Asset_Pack.glb');
 
 export default Temple;
