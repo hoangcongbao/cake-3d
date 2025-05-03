@@ -14,9 +14,9 @@ const Temple: React.FC<TempleProps> = ({
   scale = 1
 }) => {
   const modelRef = useRef<Group>(null);
-  // The GLB model should be uploaded to a real file hosting service
-  // For example: AWS S3, Google Cloud Storage, Dropbox, or a 3D model hosting service
-  const { scene } = useGLTF('https://cdn.example.com/models/Temple_Asset_Pack.glb');
+  // Use a local model file from the public directory
+  // This will work as long as you have the Temple Asset Pack.glb file in your public folder
+  const { scene } = useGLTF('https://cdn.jsdelivr.net/gh/hoangcongbao/model-3d/triposg_4e6f6a7f6babefc3.glb');
   
   // Use useEffect for animation
   useEffect(() => {
@@ -30,7 +30,7 @@ const Temple: React.FC<TempleProps> = ({
         previousTime = time;
         
         // Apply rotation
-        modelRef.current.rotation.y += deltaTime * 0.5; // Adjust speed as needed
+        //modelRef.current.rotation.y += deltaTime * 0.5; // Adjust speed as needed
       }
       
       animationFrameId = requestAnimationFrame(animate);
@@ -57,6 +57,6 @@ const Temple: React.FC<TempleProps> = ({
 };
 
 // Pre-load the model
-useGLTF.preload('https://cdn.example.com/models/Temple_Asset_Pack.glb');
+useGLTF.preload('https://cdn.jsdelivr.net/gh/hoangcongbao/model-3d/triposg_4e6f6a7f6babefc3.glb');
 
 export default Temple;

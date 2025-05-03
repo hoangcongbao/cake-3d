@@ -82,7 +82,7 @@ const CakeScene = () => {
             {showTemple && (
               <Temple
                 position={[3, -1, 0]}
-                scale={0.5}
+                scale={2}
               />
             )}
             

@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <CakeSceneComponent />
         
         {/* Title and description overlaid at the top */}
-        <div className="absolute top-4 left-4 bg-white/70 dark:bg-black/70 p-4 rounded-lg text-left max-w-md">
+        {/* <div className="absolute top-4 left-4 bg-white/70 dark:bg-black/70 p-4 rounded-lg text-left max-w-md">
           <h1 className="text-3xl font-bold mb-2">Interactive 3D Cake</h1>
           <p className="mb-2">
             Created with Next.js and Three.js. Use the controls to customize your cake, and take a screenshot to save it!
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           <p className="text-sm text-gray-600 dark:text-gray-300">
             Drag to rotate • Scroll to zoom • Use the panel on the right to customize
           </p>
-        </div>
+        </div> */}
       </div>
     </main>
   );
